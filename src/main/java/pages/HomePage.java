@@ -3,7 +3,7 @@ package pages;
 
 import java.util.Properties;
 
-import org.junit.Assert; 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,8 +19,11 @@ import factory.DriverFactory;
 public class HomePage {
 	
 	String warningmessage;
-	static  String URL = "https://dsportalapp.herokuapp.com/home";
+	//static  String URL = "https://dsportalapp.herokuapp.com/home";
      private WebDriver mydriver;
+     ConfigReader configreader = new ConfigReader();
+	 Properties prop = configreader.init_prop();
+	 String URL = prop.getProperty("HomepageURL");
      
      
      
@@ -32,9 +35,7 @@ public class HomePage {
      public void gethomepage() {
     	 
     	// mydriver.get(URL);
-    	 ConfigReader configreader = new ConfigReader();
-    	 Properties prop = configreader.init_prop();
-    	 String URL = prop.getProperty("HomepageURL");
+    	 
     	 mydriver.get(URL);
     	 
      }

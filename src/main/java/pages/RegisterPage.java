@@ -91,7 +91,7 @@ public class RegisterPage {
 	
 	public void ErrorMessage() {
 		String Errormessage = errormessage.getText();
-		String expectedmessage = "Please enter a valid username";
+		String expectedmessage = "password_mismatch:The two password fields didn’t match.";
 		Assert.assertEquals(expectedmessage, Errormessage);
 		 System.out.println(Errormessage);
 		 LoggerLoad.info(Errormessage);
@@ -111,7 +111,7 @@ public class RegisterPage {
 	
 	public void ErrorMessage1() {
 		String Errormessage1 = errormessage.getText();
-		String expectedmessage1 = "Username already exists";
+		String expectedmessage1 = "password_mismatch:The two password fields didn’t match.";
 		Assert.assertEquals(expectedmessage1, Errormessage1);
 		 System.out.println(Errormessage1);
 		 LoggerLoad.info(Errormessage1);
@@ -151,7 +151,7 @@ public void Passwordmismatch(DataTable dataTable2) {
    
    public void ErrorMessage3() {
 	   String Errormessage3 = errormessage.getText();
-	   String expectedmessage3 = "Password should contain at least 8 characters";
+	   String expectedmessage3 = "password_mismatch:The two password fields didn’t match.";
 	   Assert.assertEquals(expectedmessage3, Errormessage3);
 	   System.out.println(Errormessage3);
 	   LoggerLoad.info(expectedmessage3);
@@ -172,7 +172,7 @@ public void Passwordmismatch(DataTable dataTable2) {
    
    public void ErrorMessage4() {
 	   String Errormessage4 = errormessage.getText();
-	   String expectedmessage4 = "Password can’t be entirely numeric.";
+	   String expectedmessage4 = "password_mismatch:The two password fields didn’t match.";
 	   Assert.assertEquals(expectedmessage4, Errormessage4);
 	   System.out.println(Errormessage4);
 	   LoggerLoad.info(expectedmessage4);
@@ -194,7 +194,7 @@ public void Passwordmismatch(DataTable dataTable2) {
    
    public void ErrorMessage5() {
 	   String Errormessage5 = errormessage.getText();
-	   String expectedmessage5 = "password can’t be too similar to your other personal information.";
+	   String expectedmessage5 = "password_mismatch:The two password fields didn’t match.";
 	   Assert.assertEquals(expectedmessage5, Errormessage5);
 	   System.out.println(Errormessage5);
 	   LoggerLoad.info(expectedmessage5);

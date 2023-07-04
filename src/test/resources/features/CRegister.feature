@@ -1,4 +1,4 @@
-@tag
+@register
 Feature: User registers to the DS algo portal
   I want to use this template for my feature file
 

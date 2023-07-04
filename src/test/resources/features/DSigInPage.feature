@@ -1,4 +1,4 @@
-@tag
+@signinpage
 Feature: User Sign's in the DS algo portal link
   I want to use this template for my feature file
 

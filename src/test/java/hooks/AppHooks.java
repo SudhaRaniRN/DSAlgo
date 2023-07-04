@@ -1,12 +1,15 @@
 package hooks;
 
 import java.util.Properties;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import dsutilities.ConfigReader;
 import factory.DriverFactory;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 
@@ -34,18 +37,18 @@ public class AppHooks {
 //        driver = driverfactory.init_driver(browsername);
 //	}
 	
-//	@After(order= 0)
-//	public void quitbrowser() {
-//		driver.quit();	
-//	}
-//
-//	@After(order = 1)
-//	public void screenshot(Scenario scenario) {
-//		if(scenario.isFailed()) {
-//			//logic for taking screenshot:
-//	String screenshotName  = scenario.getName().replaceAll(" ", "_");
-//	byte [] sourcepath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-//	scenario.attach(sourcepath, "image/png", screenshotName);
-//	   }
-//	}	
+	@AfterAll(order = 1)
+	public static void quitbrowser() {
+		driver.quit();	
+	}
+
+	@After(order=0)
+	public static void screenshot(Scenario scenario) {
+		if(scenario.isFailed()) {
+			//logic for taking screenshot:
+	String screenshotName  = scenario.getName().replaceAll(" ", "_");
+	byte [] sourcepath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+	scenario.attach(sourcepath, "image/png", screenshotName);
+		}
+	}	
 }

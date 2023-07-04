@@ -1,10 +1,10 @@
 package pages;
 
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dsutilities.ConfigReader;
 import dsutilities.ExcelReader;

@@ -1,3 +1,4 @@
+@homepage
 Feature: user opens the homepage of ds algo website
   I want to use this template for my feature file
 

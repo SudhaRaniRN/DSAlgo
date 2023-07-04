@@ -1,4 +1,4 @@
-@tag
+@datastructure
 Feature: DataStructures
   I want to use this template for my feature file
 

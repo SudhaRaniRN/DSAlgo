@@ -1,4 +1,4 @@
-@tag
+@webpage
 Feature: user opens the ds algo website
   I want to use this template for my feature file
 

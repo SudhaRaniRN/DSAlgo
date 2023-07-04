@@ -1,3 +1,4 @@
+@array
 Feature: Array
   I want to use this template for my feature file
   
